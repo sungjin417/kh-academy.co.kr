@@ -1,0 +1,14 @@
+const ImageWithFallback = ({ alcoholName }) => {
+  const [srcIndex, setSrcIndex] = useState(0);
+  const extensions = ["png", "jpg", "jpeg", "webp"];
+
+  const handleError = () => {
+    if (srcIndex < extensions.length - 1) {
+      setSrcIndex(srcIndex + 1);
+    }
+  };
+
+  const src = `${process.env.PUBLIC_URL}/alcoholimg/${alcoholName}.${extensions[srcIndex]}`;
+
+  return <ItemImage src={src} onError={handleError} />;
+};

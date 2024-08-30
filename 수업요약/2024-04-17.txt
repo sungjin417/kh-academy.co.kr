@@ -1,0 +1,7 @@
+주축 : 플렉스박스의 진행방향
+교차축 : 주축과 수직인 축
+컨테이너 : 아이템을 감싸는 요소
+대부분의 flex 특성은 container에 넣어야 함
+<link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+css를 초기화 하는 코드

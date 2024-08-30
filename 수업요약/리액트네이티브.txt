@@ -1,0 +1,5 @@
+npx expo start 안돼면 이 명령어 사용 
+와이파이 사용
+엑스트라 제거
+expo install react-native-webview
+expo start -c

@@ -1,0 +1,14 @@
+JDBC : Java랑 데이터베이스를 연결하는 API(API : 함수나 라이브러리의 하나의 형태)
+Oracle DB : 여러번 틀리면 잠기는데 구글링 하세요.
+*주의점
+1. 인터페이스는 gpt한테 물어보기 힘듬
+2. insert에 1과 같거나 크다 식으로 넣으면 안됨 결과값은 0과 1 둘중 하나
+
+// VO(Value Object)(와 DTO는 거의 같다)
+넘어온 정보를 담는 그릇(= 하는일은 매핑을 하는 것),
+다른 메서드는 추가하지 못 한다. 
+// DAO(Database Access Objet)
+넘어온 정보를 VO에 담는 역할(VO객체와 데이터베이스간의 매핑 담당)
+
+인텔리제이에 라이브러리 추가하는 법
+File → Project Structure → Libraries-> + ->ok->apply-> ok

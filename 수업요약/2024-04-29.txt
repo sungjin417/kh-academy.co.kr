@@ -1,0 +1,22 @@
+React = 라이브러리(자유도가 높음)
+단점 : 첫페이지 로딩이 느리고, 안에 내용이 없어서 검색엔진에 추가되지 않음,(안에 메타 데이터로 내용을 넣어주면 해결)
+
+vscode reate 생성 시
+yarn create react-app kh-sample-react 입력 오류 날때
+//Power shell 실행 시 실행 오류 해결 방법
+power shell 관리자 모드로 실행 후,
+Set-ExecutionPolicy RemoteSigned 입력
+Y 입력
+
+//### 사용 중인 포트 강제 종료하기
+
+**Windows**
+
+netstat -ano | findstr 3000
+
+taskkill /f /pid PID
+
+/다시 시작은 yarn start
+
+//git에 올릴때 노드모듈(node_modules)은 안올라감
+따라서 yarn install해서 모듈을 받아야 함 후에 yarn start(협업 시)

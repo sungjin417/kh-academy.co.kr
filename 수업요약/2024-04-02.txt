@@ -1,0 +1,26 @@
+서브사이드 렌더링 : jsp(옛날꺼), Thymeleaf(최신꺼)
+
+  CSR (Client Side Rendering) /  SSR(Server Side Remdering)
+ex.  React, View, Angular      /     JSP, Thymeleaf, Django
+ : Virtual Dom을 사용한다     / 
+
+project 생성 한 후
+압축파일 풀고
+dev -> work_java에 붙여놓기 한 후
+이름을 jdbc_thymelef로 바꾼다
+인텔리제이를 들어가서
+ open으로 파일을 연다.
+오른쪽 아래에 로딩이 되는 지 확인하고 로딩이 다 되었는데
+빨간거 뜨면 
+코끼리
+-> bulid.gradle 에서 버전 2.7.16으로 바꾸고
+-> sourceCompatibility = '11'로 바꾼다
+main에 java에 com에 kh에 jdbc에 jdbdApplication이 메인 클래스
+그래도 안되면 lombok 플러그인 하고
+그래도 안되면 세팅에서 빌드 밑에 빌드 툴 밑에 그래들에 들어가서 
+bulid and runs using : 을 인텔리로 바꾸고
+아래 run tests using: 도 인텔리로 바꾼다
+그러면 작동!!
+
+패키지를 jdbc밑에 common, controller, dao, vo 네개의 패키지를 만들고
+클래스를 만들고 복붙

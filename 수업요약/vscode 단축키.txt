@@ -1,0 +1,8 @@
+// 같은단어 바꾸기
+Ctrl + Shift + L
+
+// 자동 줄 맞춤
+Ctrl + A로 전체 코드 선택 후 Ctrl + K + F
+
+// 자동정렬
+Shift + Alt + F

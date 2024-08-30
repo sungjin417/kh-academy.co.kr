@@ -1,0 +1,54 @@
+Python 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.applications import resnet50, ResNet50 
+from tensorflow.keras.preprocessing import image
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+ 
+model=ResNet50(weights='imagenet')
+model.summary()
+
+image_path='./hummingbird.jpg"
+img=image.load_img(image_path, target_size=(224,224))
+... plt.matshow(img)
+... 
+... x=image.img_to_array(img)
+... x=np.expand_dims(x,axis=0)
+... x=resnet50.preprocess_input(x)
+... 
+... preds=model.predict(x)
+... print("예측 결과:", resnet50.decode_predictions(preds,top=5)[0])
+... 
+... last_conv_layer=model.get_layer("conv5_block_out")
+... 
+... model_1=keras.Model(model.inputs,last_conv_layer.output)
+... 
+... input_2=keras.Input(shape=last_conv_layer.output.shape[1:])
+... x_2=model.get_layer("avg_pool")(input_2)
+... x_2=model.get_layer("predictions")(x_2)
+... 
+... with tf.GradientTape() as tape:
+...     output_1=model_1(x)
+...     tape.watch(output_1)
+...     preds=model_2(output_1)
+...     class_id=tf.argmax(preds[0])
+...     output_2=preds[:,class_id]
+... 
+... grads=tape.gradient(output_2,output_1)
+... pooled_grads=tf.reduce_mean(grads,axis=(0,1,2))
+... 
+... output_1=output_1.numpy()[0]
+... pooled_grads=pooled_grads.numpy()
+... for i in range(pooled_grads.shape[-1]):
+...     output_1[:,:,i]*=pooled_grads[i]
+... heatmap=np.mean(output_1,axis=-1)
+... 
+... heatmap=np.maximum(heatmap,0)/np.max(heatmap)
+... plt.matshow(heatmap)
+... 
+... img=image.load_img(image_path)
+... 
+... img=image.img_to_array(img)

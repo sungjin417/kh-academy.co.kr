@@ -1,0 +1,6 @@
+엘라스틱 스택
+검색에 특화된 노sqlDB
+
+json 형태로 insert 한다
+
+http://localhost:5601

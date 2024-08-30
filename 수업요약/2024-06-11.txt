@@ -1,0 +1,8 @@
+세션
+카카오 다른기기에서 로그인 하면 끊기는거
+단점 : 서버를 리스타트 할때 다 끊긴다, 비용 많이 들어감
+장점 : 보안이 강하다
+
+Token 길이는 길어야 한다 
+springboot.jwt.secret = jks20204!!qwer!@#$qwer!@#$qwer!@#$qwer!@#$jks20204!!qwer!@#$qwer!@#$qwer!@#$qwer!@#$jks20204!!qwer!@#$qwer!@#$qwer!@#$qwer!@#$jks20204!!qwer!@#$qwer!@#$qwer!@#$qwer!@#$
+이정도로

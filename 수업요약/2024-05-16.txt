@@ -1,0 +1,38 @@
+// 소 카테고리 데이터
+const menuCategoryData = {
+  한식: ["불고기", "비빔밥", "김치찌개", "된장찌개"],
+  중식: ["짜장면", "짬뽕", "탕수육", "양장피"],
+  양식: ["스테이크", "파스타", "피자", "리조또"],
+  일식: ["초밥", "라면", "우동", "돈부리"],
+};
+
+// 카테고리 데이터
+const categoryData = {
+  기분: ["행복", "분노", "슬픔", "사랑"],
+  날씨: ["맑음", "흐림", "비", "눈"],
+  음식: Object.keys(menuCategoryData), // 소 카테고리와 연결된 음식 카테고리
+};
+
+소 카테고리가 카테고리 데이터 위에 있어야 함
+오류가 발생한 이유는 코드에서 menuCategoryData를 정의하기 전에 categoryData에서 참조하려고 시도했기 때문입니다. 이 문제를 해결하기 위해 menuCategoryData를 categoryData보다 앞에 정의해야 합니다.
+
+
+
+ <div>
+              <div className="sub-category-container">
+                {categoryData[selectedCategory].map((subCategory) => (
+                  <button
+                    key={subCategory}
+                    onClick={() => setSelectedSubCategory(subCategory)}
+                  >
+                    {subCategory}
+                  </button>
+                ))}
+                {selectedSubCategory && (
+                  <div>
+                    <h3>선택한 중 카테고리: {selectedSubCategory}</h3>
+                    <DrinkList drinks={dummyDrinkData} />
+                  </div>
+                )}
+              </div>
+            </div>

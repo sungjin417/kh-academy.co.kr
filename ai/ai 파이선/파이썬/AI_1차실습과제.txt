@@ -1,0 +1,26 @@
+import random
+- 모듈을 임포트하여 랜덤 함수를 사용할 수 있게한다.
+
+yut=['xxxx', 'xxxo', 'xxox', 'xxoo', 'xoxx', 'xoxo', 'xoox', 'xo', 'oxxx', 'oxxo', 'oxox', 'oxoo', 'ooxx', 'ooxo', 'ooox', 'oooo']
+- 윷의 면을 표현하는 문자열을 리스트에 저장한다. 
+
+throw=random.choice(yut)
+- yut 리스트에서 무작위로 하나를 선택하여 throw 변수에 저장한다.
+이 변수가 주사위를 던져서 나온 윷의 결과가 된다.
+
+print(throw)
+- 변수에 저장된 윷의 결과를 출력한다.
+
+n=throw.count('o')
+변수에 저장된 문자열에서 'o'의 개수를 세어서 그 개수를 n 변수에 저장한다. 
+
+if n==4: print("모")
+- n이 4일 때, (윷의 앞면이 4개일 때) "모"를 출력한다.
+elif n==3: print("도")
+- n이 3일 때, (윷의 앞면이 4개일 때) "도"를 출력한다.
+elif n==2: print("개")
+- n이 2일 때, (윷의 앞면이 4개일 때) "개"를 출력한다.
+elif n==1: print("걸")
+- n이 1일 때, (윷의 앞면이 4개일 때) "걸"를 출력한다.
+elif n==0: print("윷")
+- n이 0일 때, (윷의 앞면이 4개일 때) "윷"를 출력한다.

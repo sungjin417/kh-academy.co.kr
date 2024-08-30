@@ -1,0 +1,2 @@
+async : 비동기
+await : 대기

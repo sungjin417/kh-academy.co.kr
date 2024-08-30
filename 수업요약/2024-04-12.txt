@@ -1,0 +1,16 @@
+. 은 클래스 선택자
+
+inline-block
+안은 블럭이고 그다음은 인라인
+
+px은 홀수말고 짝수로 떨어져야 함
+<select name="city" id="city" size="3">
+: 3개씩 보여지게 만듬
+<select name="city" id="city" multiple>
+: 여러개 선택이 가능해 짐
+
+input[type: date]
+
+display: flex; 수평정렬
+justify-content : 주축정렬(가로축정렬X)
+flex-direction: 기본 수평

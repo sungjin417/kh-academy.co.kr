@@ -1,0 +1,4 @@
+ grid-template-columns: 200px 200px 200px; 
+/* 2fr 1fr 1fr; ->이건 비율(2:1:1)*/
+
+grid-template-areas: 에서 .을 찍으면 칸이 비어진다

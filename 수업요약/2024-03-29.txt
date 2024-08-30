@@ -1,0 +1,11 @@
+_언더바 많이 쓰는이유(대소문자 구분이 없기 때문에 명사를 _로 구분한다)
+
+// 제약조건
+NOT NULL : NULL을 허용하지 않고, 중복허용
+UNIQUE : 유일한 값으로, 중복불가(이름X,이메일O)
+PRIMARY KET : 유일한 값으로, 테이블 하나만 지정(검색속도가 빠르다.)
+FOREIGN KEY : 조인을 해주는 키(하지만 없어도 동등조인 가능)
+
+// 권한부여
+sqlplus sys/1234 as sysdba
+grant create view to SCOTT;

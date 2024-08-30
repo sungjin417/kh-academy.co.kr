@@ -1,0 +1,19 @@
+테이블 : from
+행 : where
+열 : select
+
+		실행순서
+SELECT		5.	열
+FROM		1.	
+WHERE		2.	그룹 되기 전에 조건(행의 조건)
+GROUP BY	3.	그룹 만들기
+HAVING		4.	그룹 된 후 조건(그룹의 조건)
+ORDER BY	6.	
+
+--연도별 : TO_CHAR(HIREDATE, 'YYYY') -> TO_CHAR은 문자열로 바꿔줌
+-- 사원수 : COUNT(*) -> *은 전체를 의미함
+-- 평균급여(소수점이하는 날려버림) : TRUNC(AVG(sal))
+-- 매개변수에 대한 출력 : NVL2(comm, '0', 'X')
+-- where 조건은 한번 쓰면 그다음에 추가하기 위해서는 and를 써야함
+-- ROUND : 반올림 해서 출력
+-- ON~JOIN은 방식의 차이(ANSI방식)

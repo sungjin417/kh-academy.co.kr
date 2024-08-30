@@ -1,0 +1,33 @@
+@NoArgsConstructor
+애노테이션은 롬복(Lombok) 라이브러리에서 제공하는 기능으로, 
+해당 클래스에 기본 생성자(매개변수가 없는 생성자)를 자동으로 
+생성해줍니다.
+
+@Lob 
+Java Persistence API (JPA)에서 제공하는 기능으로, 
+데이터베이스의 큰 데이터(LOB: Large Object)를 처리하기 위해 
+사용됩니다. 
+이 애노테이션은 텍스트 또는 바이너리 데이터와 같이 
+크기가 큰 데이터를 데이터베이스에 저장할 때 유용합니다.
+
+@PrePersist 
+Java Persistence API (JPA)에서 제공하는 라이프사이클 콜백 메서드를
+정의하기 위해 사용됩니다. 
+이 애노테이션은 엔티티가 데이터베이스에 persist (저장)되기 전에 
+실행되어야 하는 메서드에 붙입니다.
+
+
+cascade = CascadeType.ALL
+JPA (Java Persistence API)에서 엔티티 관계를 설정할 때 
+사용되는 옵션 중 하나로, 관계된 엔티티에 대해 특정 작업을 
+자동으로 전파하는 역할을 합니다. 
+CascadeType.ALL은 모든 종류의 작업을 
+관계된 엔티티에 전파한다는 의미
+
+
+orphanRemoval = true는
+JPA(Java Persistence API)에서 사용되는 옵션으로, 
+부모 엔티티와의 관계가 끊어진 자식 엔티티(고아 객체)를
+ 자동으로 삭제하도록 설정하는 기능입니다. 
+이 옵션은 cascade = CascadeType.ALL과 함께 사용되기도 하지만, 
+독립적으로도 중요한 역할을 합니다.

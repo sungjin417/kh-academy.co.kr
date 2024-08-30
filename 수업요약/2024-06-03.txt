@@ -1,0 +1,4 @@
+use mysql;
+select user,host from user;
+
+mysql 확인용

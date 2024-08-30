@@ -1,0 +1,91 @@
+Oracle 11g
+1. 터미널 실행
+Microsoft Windows [Version 10.0.19045.4046]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\user1>sqlplus
+
+SQL*Plus: Release 11.2.0.2.0 Production on 월 3월 25 11:16:46 2024
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter user-name:
+ERROR:
+ORA-01017: invalid username/password; logon denied
+
+
+Enter user-name:
+ERROR:
+ORA-01017: invalid username/password; logon denied
+
+
+Enter user-name:
+ERROR:
+ORA-01017: invalid username/password; logon denied
+
+
+SP2-0157: unable to CONNECT to ORACLE after 3 attempts, exiting SQL*Plus
+
+C:\Users\user1>sqlplus SYS/1234 AS SYSDBA
+
+SQL*Plus: Release 11.2.0.2.0 Production on 월 3월 25 11:17:38 2024
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> ALTER USER SCOTT IDENTIFIED BY TIGER ACCOUNT UNLOCK;
+ALTER USER SCOTT IDENTIFIED BY TIGER ACCOUNT UNLOCK
+           *
+ERROR at line 1:
+ORA-01918: user 'SCOTT' does not exist
+
+
+SQL> @C:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sq
+SP2-0310: unable to open file "C:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sq"
+SQL> @C:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql
+SQL> show user:
+USER is "SCOTT"
+SP2-0158: unknown SHOW option ":"
+SQL> ALTER USER SCOTT IDENTIFIED BY TIGER;
+
+2. spldeveloper 파일 압풀풀고,
+c 드라이브 안에 oraclexe 안에 붙여넣기
+
+3. 외쪽 위의 초록색 플러스 누르고
+Name  : SCOTT
+사용자 이름 : SCOTT
+비밀번호 : TIGER
+후 테스트
+성공하면 접속
+SELECT * FROM emp; 로 확인
+
+User altered.
+
+SQL> EXIT
+Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+C:\Users\user1>sqlplus SYS/1234 AS SYSDBA
+
+SQL*Plus: Release 11.2.0.2.0 Production on 월 3월 25 11:38:26 2024
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> ALTER USER HR ACCOUNT UNLOCK IDENTIFIED BY 1234;
+
+User altered.
+
+4. Name  : HR
+사용자 이름 : HR
+비밀번호 : 1234
+후 테스트
+성공하면 접속
+SELECT * FROM tab; 로 확인
+
+DESKTOP-4GBG0T0
